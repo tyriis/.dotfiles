@@ -1,0 +1,1 @@
+export KUBE_CONFIG_PATH=~/.kube/config
