@@ -1,6 +1,6 @@
 [options]
 # font = Bitstream Vera Sans Mono 14
-font = Fira Code Symbol:style=Symbol-Regular 12
+# font = Fira Code:style=Symbol-Regular 11
 # font = Monospace 18
 # font = Terminus (TTF) 16
 # font = Droid Sans Mono 16

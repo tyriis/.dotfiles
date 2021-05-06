@@ -43,7 +43,7 @@ if [[ "$(tty)" == "/dev/tty1" ]]; then
     startx
 else
   export TERM="xterm-termite"
-  
+
 fi
 
 # create a zkbd compatible hash;
