@@ -1,15 +1,15 @@
-# key[Home]="${terminfo[khome]}"
-# key[End]="${terminfo[kend]}"
+key[Home]="${terminfo[khome]}"
+key[End]="${terminfo[kend]}"
 key[Insert]="${terminfo[kich1]}"
-# key[Backspace]="${terminfo[kbs]}"
+key[Backspace]="${terminfo[kbs]}"
 key[Delete]="${terminfo[kdch1]}"
-# key[Up]="${terminfo[kcuu1]}"
-# key[Down]="${terminfo[kcud1]}"
-# key[Left]="${terminfo[kcub1]}"
-# key[Right]="${terminfo[kcuf1]}"
-# key[PageUp]="${terminfo[kpp]}"
-# key[PageDown]="${terminfo[knp]}"
-# key[ShiftTab]="${terminfo[kcbt]}"
+key[Up]="${terminfo[kcuu1]}"
+key[Down]="${terminfo[kcud1]}"
+key[Left]="${terminfo[kcub1]}"
+key[Right]="${terminfo[kcuf1]}"
+key[PageUp]="${terminfo[kpp]}"
+key[PageDown]="${terminfo[knp]}"
+key[ShiftTab]="${terminfo[kcbt]}"
 
 
 # setup key accordingly
@@ -27,6 +27,11 @@ key[Delete]="${terminfo[kdch1]}"
 #[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 
 # overwrite keybinding for xps13
-bindkey  "^[[1~"   beginning-of-line
-bindkey  "^[[4~"   end-of-line
+# bindkey  "^[[1~"   beginning-of-line
+# bindkey  "^[[4~"   end-of-line
+# bindkey  "^[[3~"  delete-char
+
+# overwrite keybindings for red
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char

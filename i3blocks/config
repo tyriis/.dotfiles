@@ -38,11 +38,19 @@ markup=none
 
 #[volume]
 #command=/usr/lib/i3blocks/volume/volume
-#label=♪
+#label=♪ 
 # label=VOL
 #interval=once
 #signal=10
 #STEP=5%
+
+
+[arch_update]
+command=$HOME/.dotfiles/i3blocks/blocks/arch_update/arch_update -q -a
+interval=30
+short_text=false
+label=UPDATES: 
+color=#e06c75
 
 # Disk usage
 #
@@ -51,7 +59,7 @@ markup=none
 # (defaults to 10 for 10%).
 [disk]
 command=/usr/lib/i3blocks/disk/disk
-label=NVMe:
+label=NVMe: 
 #DIR=/mnt/data
 ALERT_LOW=10
 interval=30
@@ -61,7 +69,7 @@ interval=30
 # The type defaults to "mem" if the instance is not specified.
 [memory]
 command=/usr/lib/i3blocks/memory/memory
-label=MEM:
+label=MEM: 
 separator=true
 interval=30
 
@@ -78,9 +86,9 @@ interval=30
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
 command=/usr/lib/i3blocks/iface/iface
-label=NET:
+label=NET: 
 #IFACE=wlan0
-color=#00FF00
+color=#6ebe8a
 interval=10
 separator=true
 
@@ -89,45 +97,42 @@ command=/usr/lib/i3blocks/wifi/wifi
 INTERFACE=wlp3s0
 label=wifi:
 interval=10
-separator=true
+separator=false
 
-[bandwidth]
-command=/usr/lib/i3blocks/bandwidth/bandwidth
-INTERFACE=wlp2s0
-interval=5
+#[bandwidth]
+#command=/usr/lib/i3blocks/bandwidth/bandwith
+##INTERFACE=eth0
+#interval=5
 
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-[cpu_usage]
-command=/usr/lib/i3blocks/cpu_usage/cpu_usage
-label=CPU:
-interval=10
-min_width=CPU 100.00%
-separator=true
+#[cpu_usage]
+#command=/usr/lib/i3blocks/cpu_usage/cpu_usage
+#label=CPU
+#interval=10
+#min_width=CPU 100.00%
+#separator=false
 
 [load_average]
 command=/usr/lib/i3blocks/load_average/load_average
-label=LOAD:
+label=LOAD: 
 interval=10
-seperator=true
 
 # Battery indicator
 #
 # The battery instance defaults to 0.
-[battery]
-command=/usr/lib/i3blocks/battery/battery
-label=BAT:
-# label=⚡
-interval=30
-BAT_NUMBER=0
+#[battery]
+#label=BAT
+#label=⚡
+#interval=30
 
 # Date Time
 #
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
-interval=5
+interval=1
 
 # Generic media player support
 #

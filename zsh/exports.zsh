@@ -1,6 +1,10 @@
-# set default editors
-export EDITOR="nvim"
-export VISUAL="nvim"
+if [[ $TERM == xterm-termite ]]; then
+    export EDITOR="code"
+    export VISUAL="code"
+else
+    export EDITOR="nvim"
+    export VISUAL="nvim"
+fi
 
 # set flags for package installations
 export CFLAGS="-Os"
@@ -26,7 +30,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
 [[ ! -d $XDG_CONFIG_HOME ]] && command mkdir -p "$XDG_CONFIG_HOME"
 # export XDG_DATA_DIRS=
-# export XDG_CONFIG_DIRS=
+export XDG_CONFIG_DIRS="$HOME/.dotfiles"
 export XDG_CACHE_HOME=$HOME/.cache
 [[ ! -d $XDG_CACHE_HOME ]] && command mkdir -p "$XDG_CACHE_HOME"
 # export XDG_RUNTIME_DIR

@@ -42,17 +42,8 @@ DISABLE_AUTO_UPDATE="true"
 if [[ "$(tty)" == "/dev/tty1" ]]; then
     startx
 else
-    #if [[ "$(tty)" == "/dev/pts/0" ]]; then
-    #  bindkey "^[[1~" beginning-of-line
-    #  bindkey "^[[4~" end-of-line
-    #    if [[ ! $TMUX ]]; then
-    #        tmux -2 attach
-    #    fi
-    #else
-      bindkey "^[[F" end-of-line
-      bindkey "^[[H" beginning-of-line
-      export TERM="xterm-termite"
-    #fi
+  export TERM="xterm-termite"
+  
 fi
 
 # create a zkbd compatible hash;
@@ -64,7 +55,6 @@ if [[ $TERM == xterm-termite ]]; then
   # __vte_prompt_command
 fi
 
-
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
@@ -74,7 +64,7 @@ source $ZDOTDIR/history.zsh
 source $ZDOTDIR/aliases.zsh
 source $ZDOTDIR/exports.zsh
 source $ZDOTDIR/keybindings.zsh
-source $ZDOTDIR/pyenv.zsh
+[[ -f /usr/bin/pyenv ]] && source $ZDOTDIR/pyenv.zsh
 source $ZDOTDIR/path.zsh
 source $ZDOTDIR/npm.zsh
 source $ZDOTDIR/gcloud.zsh

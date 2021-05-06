@@ -25,8 +25,8 @@ zstyle ':completion:*' menu select
 # enable privileged autocompletion (sudo)
 zstyle ':completion::complete:*' gain-privileges 1
 
-[[ /usr/bin/kubectl ]] && source <(kubectl completion zsh)
-[[ /usr/bin/helm ]] && source <(helm completion zsh)
+[[ -f /usr/bin/kubectl ]] && source <(kubectl completion zsh)
+[[ -f /usr/bin/helm ]] && source <(helm completion zsh)
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

@@ -1,0 +1,106 @@
+[options]
+# font = Bitstream Vera Sans Mono 14
+font = Fira Code Symbol:style=Symbol-Regular 12
+# font = Monospace 18
+# font = Terminus (TTF) 16
+# font = Droid Sans Mono 16
+#font = Fira Code Symbol 16
+#font = Inconsolata-dz for Powerline 20
+font = Inconsolata-dz for Powerline 10
+
+allow_bold = true
+clickable_url = true
+scrollback_lines = 15000
+cursor_blink = system
+cursor_shape = block
+
+
+#[colors]
+
+# special
+#foreground      = #a2a2a2
+#foreground_bold = #a2a2a2
+#cursor          = #a2a2a2
+#background      = #282828
+#background = rgba(63, 63, 63, 0.5)
+
+# black
+#color0  = #555555
+#color8  = #888888
+
+# red
+#color1  = #9c3528
+#color9  = #d64937
+
+# green
+#color2  = #61bc3b
+#color10 = #86df5d
+
+# yellow
+#color3  = #f3b43a
+#color11 = #fdd75a
+
+# blue
+#color4  = #0d68a8
+#color12 = #0f75bd
+
+# magenta
+#color5  = #744560
+#color13 = #9e5e83
+
+# cyan
+#color6  = #288e9c
+#color14 = #37c3d6
+
+# white
+#color7  = #a2a2a2
+#color15 = #f9f9f9
+
+
+# one dark
+[colors]
+
+# special
+# foreground      = #abb2bf
+# foreground_bold = #abb2bf
+foreground      = #dedede
+foreground_bold = #dedede
+
+cursor          =
+background      = #252525
+# // #282c34
+
+# black
+color0  = #282c34
+color8  = #5c6370
+
+# red
+color1  = #e06c75
+color9  = #be5046
+
+# green
+# color2  = #98c379
+color2  = #73c991
+color10 = #7a9f60
+
+# yellow
+color3  = #e5c07b
+color11 = #d19a66
+
+# blue
+color4  = #61afef
+color12 = #3b84c0
+
+# magenta
+color5  = #c678dd
+color13 = #9a52af
+
+# cyan
+color6  = #56b6c2
+color14 = #3c909b
+
+# white
+color7  = #abb2bf
+color15 = #828997
+
+vim: ft=dosini cms=#%s
