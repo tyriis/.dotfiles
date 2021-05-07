@@ -1,6 +1,6 @@
 if [[ $TERM == xterm-termite ]]; then
-    export EDITOR="code"
-    export VISUAL="code"
+  export EDITOR='code -w'
+  export VISUAL='code -w'
 else
     export EDITOR="nvim"
     export VISUAL="nvim"
