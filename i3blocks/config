@@ -26,7 +26,7 @@
 # Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
 # command=$SCRIPT_DIR/$BLOCK_NAME
-# command=/usr/lib/i3blocks/$BLOCK_NAME
+command=/usr/lib/i3blocks/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
@@ -37,8 +37,8 @@ markup=none
 # See the script for details.
 
 #[volume]
-#command=/usr/lib/i3blocks/volume/volume
-#label=♪ 
+# #command=/usr/lib/i3blocks/volume/volume
+# label=♪
 # label=VOL
 #interval=once
 #signal=10
@@ -49,7 +49,7 @@ markup=none
 command=$HOME/.dotfiles/i3blocks/blocks/arch_update/arch_update -q -a
 interval=30
 short_text=false
-label=UPDATES: 
+label=UPDATES:
 color=#e06c75
 
 # Disk usage
@@ -58,27 +58,37 @@ color=#e06c75
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-command=/usr/lib/i3blocks/disk/disk
-label=NVMe: 
+# command=/usr/lib/i3blocks/disk/disk
+label=NVMe: 
 #DIR=/mnt/data
-ALERT_LOW=10
+ALERT_LOW=99
 interval=30
 
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-command=/usr/lib/i3blocks/memory/memory
-label=MEM: 
+command=$HOME/.dotfiles/i3blocks/blocks/memory/memory
+# command=/usr/lib/i3blocks/memory/memory
+label=MEM: 
 separator=true
 interval=30
+markup=pango
 
-#[memory]
-#command=/usr/lib/i3blocks/volume/volume
-#label=SWAP
-#instance=swap
-#separator=false
-#interval=30
+[load_average]
+command=/usr/lib/i3blocks/load_average/load_average
+label=LOAD: 
+interval=10
+
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[temperature]
+label=TEMP: 
+interval=10
+
 
 # Network interface monitoring
 #
@@ -86,7 +96,7 @@ interval=30
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
 command=/usr/lib/i3blocks/iface/iface
-label=NET: 
+label=NET: 
 #IFACE=wlan0
 color=#6ebe8a
 interval=10
@@ -95,13 +105,13 @@ separator=true
 [wifi]
 command=/usr/lib/i3blocks/wifi/wifi
 INTERFACE=wlp3s0
-label=wifi:
+label=wifi: 
 interval=10
 separator=false
 
 #[bandwidth]
 #command=/usr/lib/i3blocks/bandwidth/bandwith
-##INTERFACE=eth0
+#INTERFACE=eth0
 #interval=5
 
 # CPU usage
@@ -115,10 +125,14 @@ separator=false
 #min_width=CPU 100.00%
 #separator=false
 
-[load_average]
-command=/usr/lib/i3blocks/load_average/load_average
-label=LOAD: 
-interval=10
+# Fetch the public IP address only on startup
+[public-ip]
+command=wget -qO - icanhazip.com
+interval=once
+label=IP: 
+
+
+
 
 # Battery indicator
 #
@@ -149,14 +163,6 @@ interval=1
 #[openvpn]
 #interval=20
 
-# Temperature
-#
-# Support multiple chips, though lm-sensors.
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-#[temperature]
-#label=TEMP
-#interval=10
 
 # Key indicators
 #
@@ -167,7 +173,8 @@ interval=1
 #[keyindicator]
 #KEY=CAPS
 #markup=pango
-#interval=once
+# interval=once
+#interval
 #signal=11
 
 #[keyindicator]
@@ -175,3 +182,9 @@ interval=1
 #markup=pango
 #interval=once
 #signal=11
+
+# Fancy text with multiple colors and shapes
+# [funky]
+# full_text=<span foreground="red" size="x-large">Roses</span> and <i><span color="#EE37B8">violets</span></i>!
+# markup=pango
+# urgent=true
