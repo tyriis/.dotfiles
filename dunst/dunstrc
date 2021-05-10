@@ -19,7 +19,7 @@
     #   %I  iconname (without its path)
     #   %p  progress value if set ([  0%] to [100%]) or nothing
     # Markup is allowed
-    format = "<b>%a:</b> (%s)\n%b"
+    format = "<b>%a</b>\n%b"
 
     # Sort messages by urgency
     sort = yes
@@ -125,6 +125,8 @@
     browser = /usr/bin/google-chrome-stable -new-tab
 
     icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/:/usr/share/icons/Adwaita/32x32/legacy/:/usr/share/icons/Adwaita/32x32/actions/:/usr/share/icons/Adwaita/32x32/apps/:/usr/share/icons/Adwaita/32x32/categories/:/usr/share/icons/Adwaita/32x32/emblems/:/usr/share/icons/Adwaita/32x32/emotes/:/usr/share/icons/Adwaita/32x32/mimetypes/:/usr/share/icons/Adwaita/32x32/ui/:/usr/share/icons/hicolor/32x32/apps
+
+    max_icon_size = 64x64
 
 [frame]
     width = 0
