@@ -1,5 +1,5 @@
 [global]
-    font = Monospace 8
+    font = pango:DroidSansMono 10
 
     # allow a small subset of html markup:
     # <b>bold</b>
@@ -19,7 +19,7 @@
     #   %I  iconname (without its path)
     #   %p  progress value if set ([  0%] to [100%]) or nothing
     # Markup is allowed
-    format = "<b>%a:</b> %s\n%b"
+    format = "<b>%a:</b> (%s)\n%b"
 
     # Sort messages by urgency
     sort = yes
@@ -59,7 +59,7 @@
     # right side of the screen.  Y is measured from the top and down respectevly.
     # The width can be negative. In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-30+20"
+    geometry = "350x5-30+20"
 
     # The transparency of the window. range: [0; 100]
     # This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
@@ -71,7 +71,7 @@
     idle_threshold = 120
 
     # Which monitor should the notifications be displayed on.
-    monitor = 0
+    monitor = 1
 
     # Display notification on focused monitor. Possible modes are:
     # mouse: follow mouse pointer
@@ -83,7 +83,8 @@
     #
     # If this option is set to mouse or keyboard, the monitor option will be
     # ignored.
-    follow = keyboard
+    # follow = keyboard
+    follow = none
 
     # should a notification popped up from history be sticky or
     # timeout as if it would normally do.
@@ -92,7 +93,7 @@
     # The height of a single line. If the height is smaller than the font height,
     # it will get raised to the font height.
     # This adds empty space above and under the text.
-    line_height = 0
+    line_height = 1
 
     # Draw a line of 'separatpr_height' pixel height between two notifications.
     # Set to 0 to disable
@@ -121,7 +122,9 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # browser for opening urls in context menu
-    browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/google-chrome-stable -new-tab
+
+    icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/:/usr/share/icons/Adwaita/32x32/legacy/:/usr/share/icons/Adwaita/32x32/actions/:/usr/share/icons/Adwaita/32x32/apps/:/usr/share/icons/Adwaita/32x32/categories/:/usr/share/icons/Adwaita/32x32/emblems/:/usr/share/icons/Adwaita/32x32/emotes/:/usr/share/icons/Adwaita/32x32/mimetypes/:/usr/share/icons/Adwaita/32x32/ui/:/usr/share/icons/hicolor/32x32/apps
 
 [frame]
     width = 0
@@ -134,16 +137,16 @@
     # xev might be helpful to find names for keys
 
     # close notification
-    close = mod4+m
+    close = mod1+m
 
     # close all notifications
-    close_all = mod4+shift+m
+    close_all = mod1+shift+m
 
     # redisplay last message(s)
-    history = mod4+n
+    history = mod1+n
 
     # context menu
-    context = mod4+shift+i
+    context = mod1+shift+i
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
