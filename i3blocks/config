@@ -47,9 +47,9 @@ markup=none
 
 [arch_update]
 command=$HOME/.dotfiles/i3blocks/blocks/arch_update/arch_update -q -a
-interval=30
+interval=3600
 short_text=false
-label=UPDATES:
+label=UPDATES: 
 color=#e06c75
 
 # Disk usage
