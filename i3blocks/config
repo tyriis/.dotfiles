@@ -47,7 +47,7 @@ markup=none
 
 [arch_update]
 command=$HOME/.dotfiles/i3blocks/blocks/arch_update/arch_update -q -a
-interval=3600
+interval=once
 short_text=false
 label=UPDATES: 
 color=#e06c75
