@@ -46,3 +46,8 @@ ZSH_CACHE_DIR=$XDG_CACHE_HOME/zsh
 # -F - exit if text is less then one screen long
 # -R - was on by default on my system, something related to colors<Paste>
 export LESS=-iXFR
+
+
+# https://github.com/docker/docker-credential-helpers/issues/118
+# ask for passphrase in terminal
+export GPG_TTY=$(tty)
