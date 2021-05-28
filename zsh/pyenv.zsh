@@ -1,10 +1,9 @@
 # enable pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-eval "$(pyenv init -)"
+# add to path
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 # enable pyenvvirtualenv
-eval "$(pyenv virtualenv-init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-
-# add to path
-PATH="$PATH:$HOME/.phpenv/bin"
+eval "$(pyenv virtualenv-init -)"
