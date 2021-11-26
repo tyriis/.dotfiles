@@ -22,7 +22,7 @@ alias diff=colordiff
 alias serve="python3 -m http.server"
 
 # set terminal to 265color for ssh
-alias ssh="TERM=\"xterm-256color\" ssh"
+# alias ssh="TERM=\"xterm-256color\" ssh"
 
 # date formater
 alias DATE='date +"%Y-%m-%d"'

@@ -1,13 +1,3 @@
-if [[ $TERM == xterm-termite ]]; then
-  # export EDITOR='code -w'
-  # export VISUAL='code -w'
-  export EDITOR='nvim'
-  export VISUAL='nvim'
-else
-    export EDITOR="nvim"
-    export VISUAL="nvim"
-fi
-
 # set flags for package installations
 export CFLAGS="-Os"
 export CXXFLAGS="$CFLAGS"
@@ -17,7 +7,7 @@ export ARCHFLAGS="-arch x86_64"
 
 # set xterm
 # export TERM="xterm-256color"
-export TERM="xterm-color"
+# export TERM="xterm-color"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

@@ -25,7 +25,8 @@ SPACESHIP_PROMPT_ORDER=(
   pyenv
   # dotnet
   # ember
-  kubecontext
+  # kubecontext
+  kubectl
   battery
   exec_time
   line_sep

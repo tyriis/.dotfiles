@@ -41,19 +41,13 @@ DISABLE_AUTO_UPDATE="true"
 # start XServer if login on tty1
 if [[ "$(tty)" == "/dev/tty1" ]]; then
     startx
-else
-  export TERM="xterm-termite"
-
+# else
+#   export TERM="xterm-color"
 fi
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 typeset -g -A key
-
-if [[ $TERM == xterm-termite ]]; then
-  . /etc/profile.d/vte.sh
-  # __vte_prompt_command
-fi
 
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search

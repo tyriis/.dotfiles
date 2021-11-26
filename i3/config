@@ -26,7 +26,7 @@ font pango:DroidSansMono 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -218,6 +218,9 @@ focus_follows_mouse no
 # start network manager applet
 exec --no-startup-id nm-applet
 
+# start barrier
+exec --no-startup-id barrier
+
 for_window [class="dunst"] floating enable
 hide_edge_borders both
 
@@ -236,10 +239,12 @@ mode "move" {
 bindsym $mod+m focus floating; mode "move"
 
 
-exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/termite'
+# exec --no-startup-id /usr/bin/alacritty
+exec --no-startup-id i3-msg 'workspace $ws1; exec /usr/bin/alacritty'
 exec --no-startup-id /usr/bin/google-chrome-stable
 exec --no-startup-id /usr/bin/code
 exec --no-startup-id /usr/bin/discord
+exec --no-startup-id /usr/bin/slack
 exec --no-startup-id /usr/bin/spotify
 
 # exec --no-startup-id /home/nils/.pyenv/versions/idle2mqtt/bin/python2.7 /home/nils/projects/idle2mqtt/main.py
@@ -248,6 +253,8 @@ exec --no-startup-id /usr/bin/spotify
 assign [class="^Google-chrome$"] → $ws2
 assign [class="^Code"] → $ws4
 assign [class="^Lens"] → $ws7
+assign [class="^Slack"] → $ws5
+assign [class="Alacritty"] → $ws1
 
 # assign [class="^jetbrains-pycharm"] → $ws4
 # assign [class="^jetbrains-phpstorm"] → $ws4
@@ -257,6 +264,7 @@ assign [class="^Lens"] → $ws7
 # assign [class="Spotify"] → $ws6
 for_window [class="Spotify"] move to workspace $ws3
 for_window [class="discord"] move to workspace $ws5
+for_window [class="slack"] move to workspace $ws5
 for_window [class="^florence$"] floating enable
 
 
