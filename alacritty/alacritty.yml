@@ -317,35 +317,68 @@ font:
   #indexed_colors: []
 
 # Colors (Material Theme)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x222222'  # '0x1e282d'
+#     foreground: '0xdddddd'  #  '0xc4c7d1'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x666666'
+#     red:     '0xeb606b'
+#     green:   '0xc3e88d'
+#     yellow:  '0xf7eb95'
+#     blue:    '0x80cbc4'
+#     magenta: '0xff2f90'
+#     cyan:    '0xaeddff'
+#     white:   '0xffffff'
+
+#   # Bright colors
+#   bright:
+#     black:   '0xff262b'
+#     red:     '0xeb606b'
+#     green:   '0xc3e88d'
+#     yellow:  '0xf7eb95'
+#     blue:    '0x7dc6bf'
+#     magenta: '0x6c71c4'
+#     cyan:    '0x35434d'
+#     white:   '0xffffff'
+
+
+
+# Colors (Dracula) adapted
 colors:
   # Default colors
   primary:
     background: '0x222222'  # '0x1e282d'
     foreground: '0xdddddd'  #  '0xc4c7d1'
 
+  cursor:
+    text: '#212121'
+    cursor: '#C0C5CE'
+
   # Normal colors
   normal:
-    black:   '0x666666'
-    red:     '0xeb606b'
-    green:   '0xc3e88d'
-    yellow:  '0xf7eb95'
-    blue:    '0x80cbc4'
-    magenta: '0xff2f90'
-    cyan:    '0xaeddff'
-    white:   '0xffffff'
+    black:   '0x000000'
+    red:     '0xff5555'
+    green:   '0x50fa7b'
+    yellow:  '0xf1fa8c'
+    blue:    '0xbd93f9'
+    magenta: '0xff79c6'
+    cyan:    '0x8be9fd'
+    white:   '0xbbbbbb'
 
   # Bright colors
   bright:
-    black:   '0xff262b'
-    red:     '0xeb606b'
-    green:   '0xc3e88d'
-    yellow:  '0xf7eb95'
-    blue:    '0x7dc6bf'
-    magenta: '0x6c71c4'
-    cyan:    '0x35434d'
+    black:   '0x555555'
+    red:     '0xff5555'
+    green:   '0x50fa7b'
+    yellow:  '0xf1fa8c'
+    blue:    '0xcaa9fa'
+    magenta: '0xff79c6'
+    cyan:    '0x8be9fd'
     white:   '0xffffff'
-
-
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
