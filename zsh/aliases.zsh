@@ -26,4 +26,15 @@ alias DATE='date +"%Y-%m-%d"'
 alias NOW='date +"%Y-%m-%d-%H%M%S"'
 
 # set compatible TERM before ssh
-alias ssh='TERM=xterm-color ssh'
+# alias ssh='TERM=xterm-color ssh'
+
+alias productivity="sleep 25m && watch -n 15 'notify-send \"Title\" \"Lets do sth different\"'"
+
+if [ "$(command -v exa)" ]; then
+    unalias -m 'll'
+    unalias -m 'l'
+    unalias -m 'la'
+    unalias -m 'ls'
+    alias ls='exa --color auto --icons -a -s type -h --time-style long-iso'
+    alias ll='exa -l --color always --icons -a -s type -h'
+fi

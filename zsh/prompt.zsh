@@ -1,4 +1,5 @@
-prompt spaceship
+source /usr/lib/spaceship-prompt/spaceship.zsh
+# prompt spaceship
 
 # ORDER
 SPACESHIP_PROMPT_ORDER=(
@@ -22,7 +23,7 @@ SPACESHIP_PROMPT_ORDER=(
   # aws
   # venv
   # conda
-  pyenv
+  # pyenv
   # dotnet
   # ember
   # kubecontext
@@ -49,7 +50,7 @@ SPACESHIP_PROMPT_DEFAULT_SUFFIX=" "
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_TIME_PREFIX="at "
 SPACESHIP_TIME_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
-SPACESHIP_TIME_FORMAT=false
+# SPACESHIP_TIME_FORMAT=false
 SPACESHIP_TIME_12HR=false
 SPACESHIP_TIME_COLOR="yellow"
 

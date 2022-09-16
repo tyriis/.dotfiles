@@ -31,11 +31,11 @@ DISABLE_AUTO_UPDATE="true"
 
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 
 # start XServer if login on tty1
@@ -53,8 +53,8 @@ autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-
 source $ZDOTDIR/history.zsh
+# source $ZDOTDIR/terminal.zsh
 source $ZDOTDIR/aliases.zsh
 source $ZDOTDIR/exports.zsh
 source $ZDOTDIR/keybindings.zsh
@@ -66,6 +66,8 @@ source $ZDOTDIR/completions.zsh
 source $ZDOTDIR/prompt.zsh
 [[ -f /usr/bin/vault ]] && source $ZDOTDIR/vault.zsh
 [[ -f /usr/bin/kubectl ]] && source $ZDOTDIR/kubernetes.zsh
+
+eval "$(direnv hook zsh)"
 
 # Load machine-specific configuration if present
 [[ -f $HOME/.zsh_profile ]] && source $HOME/.zsh_profile
